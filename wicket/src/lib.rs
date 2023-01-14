@@ -10,14 +10,11 @@
 //! in an intuitive manner.
 
 pub(crate) mod defaults;
-mod dispatch;
 pub(crate) mod inventory;
 mod screens;
 pub mod update;
-mod upload;
 mod wicketd;
 mod widgets;
 mod wizard;
 
-pub use crate::dispatch::*;
 pub use crate::wizard::*;

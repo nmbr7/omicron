@@ -2,11 +2,12 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-use anyhow::Result;
-use clap::Parser;
-use wicket::WicketApp;
+use std::error::Error;
+use wicket::Wizard;
 
-fn main() -> Result<()> {
-    let app: WicketApp = Parser::parse();
-    app.exec()
+fn main() -> Result<(), Box<dyn Error>> {
+    let mut wizard = Wizard::new();
+    wizard.run()?;
+
+    Ok(())
 }
